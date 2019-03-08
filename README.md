@@ -22,9 +22,36 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+- [ ]  Q:In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+A: In Redux you have action reducers and store. Each of them work differntly and have an important role.
+
+For actions: They are payloads which contain information, that send data from the Applicaiton you are making or using  to my store.  They carry important information to the store which everything is held.
+
+Store: In Redux they have a store,which holds the state of the applicaitron known redux keeps all the information i the store. When using the store  you can  update the state with dispatch.
+example:
+
+
+
+Reducer: In redux they have a reducer which is a function a pure one. It takes in an input and return an output. Without any changes to other things. Also an important thing a reducer does is returns a new state tree object that can be used to previous. 
+example (currentState, action) => newState
+
+
+
+- [ ] Q: What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+A: There are Application State which are global components. When being  global all components 
+is able acces. As for the Component state it is very limited only direction componets have
+access to it so. IN summary Applicaiton state is for globals and any components can use it.
+Component State is only home based and strict components are only able to use it.
+
+
+- [ ] Q: Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+A: The Redux Thunk is called a middle ware meaning that it uses async while using react and redux. And it makes ajax endpoints with using action creators. So the action creators help alot so we can use APis.
+
+
+
 
 ## Project Set Up
 
