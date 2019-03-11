@@ -1,6 +1,12 @@
 /*
-  Be sure to import in all of the action types from `../actions`
+  
+Be sure to import in all of the action types from `../actions`
 */
+import { FETCH_DATA_START, FETCH_DATA_GOOD, FETCH_DATA_FAIL } from "../actions";
+
+
+
+
 
 /*
  Your initial/default state for this project could *Although does not have to* look a lot like this
@@ -14,6 +20,15 @@
  }
 */
 
+const defaultState = {
+  smurfs: [],
+  error: '',
+  loading: false,
+};
+
+
+
+
 /*
   You'll only need one smurf reducer for this project.
   Feel free to export it as a default and import as rootReducer. 
@@ -21,3 +36,29 @@
   There is no need for 'combineReducers' in this project.
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
+const rootReducer = (state = defaultState, action) => {
+  switch (action.type) {
+      case FETCH_DATA_START:
+          return {
+              ...state,
+              loading: true
+          };
+      case FETCH_DATA_GOOD:
+          return {
+              ...state,
+              error: null,
+              loading: false,
+              smurfs: action.payload,
+          };
+      case FETCH_DATA_FAIL:
+          return {
+              ...state,
+              loading: false,
+              error: action.payload,
+          };
+      default:
+          return state;
+  }
+};
+
+export default rootReducer;

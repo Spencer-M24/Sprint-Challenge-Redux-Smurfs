@@ -3,7 +3,7 @@
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Redux, Redux I - II and Async Redux I - II. In your challenge for this Sprint, you will demonstrate proficiency by creating an application that uses ReactJS to consume live data retrieved from the World Wide Web.
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
-
+                                      
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
 You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your PM and Instructor in your cohort help channel on Slack. Your work reflects your proficiency throughout Redux and your command of the concepts and techniques in the Redux I - II and Async Redux I - I modules.
@@ -22,9 +22,36 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+- [ ]  Q:In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+A: In Redux you have action reducers and store. Each of them work differntly and have an important role.
+
+For actions: They are payloads which contain information, that send data from the Applicaiton you are making or using  to my store.  They carry important information to the store which everything is held.
+
+Store: In Redux they have a store,which holds the state of the applicaitron known redux keeps all the information i the store. When using the store  you can  update the state with dispatch.
+example:
+
+
+
+Reducer: In redux they have a reducer which is a function a pure one. It takes in an input and return an output. Without any changes to other things. Also an important thing a reducer does is returns a new state tree object that can be used to previous. 
+example (currentState, action) => newState
+
+
+
+- [ ] Q: What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+A: There are Application State which are global components. When being  global all components 
+is able acces. As for the Component state it is very limited only direction componets have
+access to it so. IN summary Applicaiton state is for globals and any components can use it.
+Component State is only home based and strict components are only able to use it.
+
+
+- [ ] Q: Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+A: The Redux Thunk is called a middle ware meaning that it uses async while using react and redux. And it makes ajax endpoints with using action creators. So the action creators help alot so we can use APis.
+
+
+
 
 ## Project Set Up
 
